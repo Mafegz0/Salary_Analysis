@@ -1,0 +1,32 @@
+column_name,data_type,source_columns,transformation,description
+timestamp,object,,,Timestamp
+age,object,,,How old are you?
+industry,object,,,What industry do you work in?
+job_title,object,,,Job title
+job_title_context,object,,,"If your job title needs additional context, please clarify here:"
+annual_salary_raw,object,,,"What is your annual salary? (You'll indicate the currency in a later question. If you are part-time or hourly, please enter an annualized equivalent -- what you would earn if you worked the job 40 hours a week, 52 weeks a year.)"
+additional_compensation_raw,float64,,,"How much additional monetary compensation do you get, if any (for example, bonuses or overtime in an average year)? Please only include monetary compensation here, not the value of benefits."
+currency,object,,,Please indicate the currency
+currency_other,object,,,"If ""Other,"" please indicate the currency here: "
+income_context,object,,,"If your income needs additional context, please provide it here:"
+country_raw,object,,,What country do you work in?
+state_us_raw,object,,,"If you're in the U.S., what state do you work in?"
+city_raw,object,,,What city do you work in?
+experience_years_total,object,,,How many years of professional work experience do you have overall?
+experience_years_field,object,,,How many years of professional work experience do you have in your field?
+education_level,object,,,What is your highest level of education completed?
+gender,object,,,What is your gender?
+race,object,,,What is your race? (Choose all that apply.)
+country_norm,object,country_raw,Lowercase + accent removal,Normalized country text used for matching/standardization.
+city_norm,object,city_raw,Lowercase + accent removal,Normalized city text used for matching/standardization.
+job_title_norm,object,job_title,Lowercase + accent removal,Normalized job title text used for grouping/analysis.
+country_clean,object,country_raw,Regex standardization and phrase filtering,Standardized country category used for analysis and visualization.
+annual_salary,Int64,annual_salary_raw,Numeric cast from validated numeric input,Annual salary as numeric value (in original currency).
+currency_final,object,"currency, currency_other",Currency resolution logic,Final currency code used for FX conversions.
+currency_other_clean,object,currency_other,Currency resolution logic applied to currency_other,Cleaned currency code derived from currency_other free text input.
+salary_COP,Float64,salary_USD,Converted using official TRM (USD to COP),Annual salary converted to COP using USD to COP TRM for the run date.
+salary_USD,Float64,"annual_salary, currency_final",Converted using FX API rates,Annual salary converted to USD using FX rates for the run date.
+city_clean,object,"city_raw, city_norm",rules to mark Unknown and Title Case for valid entries,Standardized city name with invalid entries marked as 'Unknown'.
+additional_compensation,Int64,additional_compensation_raw,Numeric cast from additional_compensation_raw,Additional annual monetary compensation as numeric value (in original currency).
+compensation_COP,Float64,"additional_compensation, currency_final",Converted to COP using currency_final mapped to rates_to_cop,Additional annual monetary compensation converted to COP using FX rates for the run date.
+total_compensation_COP,Float64,"salary_COP, compensation_COP",Sum of salary_COP and compensation_COP (NaN treated as 0 for aggregation),Total annual compensation in COP (salary_COP + compensation_COP).

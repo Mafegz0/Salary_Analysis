@@ -1,0 +1,19 @@
+original_name,new_name,descripcion_es,input_type,input_field_type,is_required
+Timestamp,timestamp,Fecha y hora en que el encuestado respondió el formulario.,object,defect,True
+How old are you?,age,Rango de edad del encuestado.,object,predefined_range,True
+What industry do you work in?,industry,Industria en la que trabaja el encuestado.,object,select_with_other_option,False
+Job title,job_title,Cargo o título profesional reportado.,object,open_text,True
+"If your job title needs additional context, please clarify here:",job_title_context,Texto libre con contexto adicional sobre el cargo.,object,open_text,False
+"What is your annual salary? (You'll indicate the currency in a later question. If you are part-time or hourly, please enter an annualized equivalent -- what you would earn if you worked the job 40 hours a week, 52 weeks a year.)",annual_salary_raw,Salario anual reportado (texto/numérico sin estandarizar).,object,open_text_number,True
+"How much additional monetary compensation do you get, if any (for example, bonuses or overtime in an average year)? Please only include monetary compensation here, not the value of benefits.",additional_compensation_raw,Compensación monetaria adicional anual reportada (sin estandarizar).,float64,open_text_number,False
+Please indicate the currency,currency,Moneda seleccionada para reportar salario.,object,predefined_range,True
+"If ""Other,"" please indicate the currency here: ",currency_other,Texto libre cuando la moneda es 'Other'.,object,open_text,False
+"If your income needs additional context, please provide it here:",income_context,Texto libre con contexto adicional sobre ingresos.,object,open_text,False
+What country do you work in?,country_raw,País reportado (sin estandarizar).,object,open_text,True
+"If you're in the U.S., what state do you work in?",state_us_raw,Estado en EE.UU. reportado (sin estandarizar).,object,predefined_range,False
+What city do you work in?,city_raw,Ciudad reportada (sin estandarizar).,object,open_text,True
+How many years of professional work experience do you have overall?,experience_years_total,Años totales de experiencia profesional (rango).,object,predefined_range,True
+How many years of professional work experience do you have in your field?,experience_years_field,Años de experiencia en el campo (rango).,object,predefined_range,True
+What is your highest level of education completed?,education_level,Nivel educativo más alto completado.,object,predefined_range,False
+What is your gender?,gender,Género reportado.,object,predefined_range,False
+What is your race? (Choose all that apply.),race,Raza reportada (puede incluir múltiples categorías).,object,predefined_range,False
