@@ -1,4 +1,4 @@
-#  Salary Analysis – Ask a Manager Survey 2021
+#  Salary Analysis – Ask a Manager Survey 
 
 Proyecto de modelado, limpieza y visualización de datos basado en la base pública **Ask a Manager Salary Survey 2021**, con el objetivo de transformar datos crudos en insumos analíticos listos para análisis y visualización interna.
 
