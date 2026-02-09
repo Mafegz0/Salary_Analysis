@@ -140,7 +140,7 @@ Participación el salario total (COP) según los años de experiencia
 
 ---
 
-# 📘 Documentación
+# Documentación
 
 ## Diccionario de datos (base original)
 Archivo: `docs/data_dictionary_v1.xlsx`
