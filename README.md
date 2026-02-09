@@ -122,9 +122,12 @@ Este archivo es la fuente oficial para:
 - Análisis comparativo internacional.
 - Visualización y storytelling.
 
+
 #  Dashboard
 
-El dashboard incluye los siguientes módulos:
+El dashboard se realizo en looker studio con este link https://lookerstudio.google.com/reporting/be86bcc0-c400-450b-83c3-7948e6424368
+
+Y se encuentra en pdf en `dashboard/Salary_survey_dashboard.pdf`  incluye los siguientes módulos:
 
 ##  Módulo 1 – Contador de respuestas
 Total de registros válidos.
