@@ -18,6 +18,8 @@ El resultado final es un dataset limpio y un dashboard funcional que permite ana
 ---
 
 ##  Estructura del Repositorio
+
+```
 Salary_Analysis/
 │
 ├── dashboard/ # Archivos del dashboard
@@ -40,6 +42,7 @@ Salary_Analysis/
 │ └── cleaning_data.ipynb
 │
 └── README.md
+```
 
 ## Fuente de Datos
 
