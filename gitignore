@@ -1,4 +1,14 @@
+# Entorno virtual
 .venv/
+venv/
+
+# Archivos temporales de Python y Jupyter
 __pycache__/
+*.pyc
 .ipynb_checkpoints/
+
+# Archivos creados por el sistema
 .DS_Store
+
+# Archivos de R
+.Rhistory
